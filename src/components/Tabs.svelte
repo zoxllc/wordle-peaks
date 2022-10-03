@@ -8,9 +8,9 @@
 	<button on:click={() => (activeTab = 1)} class="tab-button" class:active={activeTab === 1}
 		>{tab1Title}</button
 	>
-	<button on:click={() => (activeTab = 2)} class="tab-button" class:active={activeTab === 2}
+	<!-- <button on:click={() => (activeTab = 2)} class="tab-button" class:active={activeTab === 2}
 		>{tab2Title}</button
-	>
+	> -->
 </div>
 <div class="tab-content">
 	{#if activeTab === 1}
@@ -25,7 +25,7 @@
 		width: 100%;
 		display: flex;
 		box-sizing: border-box;
-		background: var(--secondary-color);
+		background: var(--tertiary-color);
 	}
 	.tab-button {
 		width: calc(50% - 0.4rem);
@@ -48,11 +48,11 @@
 		border-top-right-radius: 1rem;
 	}
 	.tab-button.active {
-		background: var(--tertiary-color);
-		color: #fff;
+		background: var(--primary-color);
+		color: #212121;
 	}
 	.tab-button:hover {
-		color: #fff;
+		color: #212121;
 	}
 
 	.tab-content {

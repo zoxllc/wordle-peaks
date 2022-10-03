@@ -126,7 +126,7 @@
 
 <section>
 	<div class="info">
-		<div class="info-item">
+		<!-- <div class="info-item">
 			<strong
 				>{`${lastGameDetail.mode === 'daily' ? '#' + lastGameDetail.dayNumber : '∞'}${
 					lastGameDetail.hardMode ? '*' : ''
@@ -137,14 +137,14 @@
 			{:else}
 				{$t('main.summary.random')}
 			{/if}
-		</div>
+		</div> -->
 		<div class="info-item">
 			<strong style="letter-spacing: 0.2rem">
 				{lastGameDetail.answer.toUpperCase()}
 			</strong>
 			{$t('main.summary.answer')}
 		</div>
-		<div class="info-item">
+		<!-- <div class="info-item">
 			<strong>
 				<Time
 					bindContainer={totalTimeElement}
@@ -155,7 +155,7 @@
 			</strong>
 			{$t('main.summary.total_time')}
 			{#if lastGameDetail.fastest}<div class="new-tag">{$t('main.messages.new_best')}</div>{/if}
-		</div>
+		</div> -->
 	</div>
 	<div class="time-stats">
 		{#each lastGameDetail.guesses as guess, g}
@@ -171,13 +171,13 @@
 						</div>
 					{/each}
 				</div>
-				<div class="time-value">
+				<!-- <div class="time-value">
 					<Time
 						bindContainer={guessTimeElements[g]}
 						ms={lastGameDetail.guessTimes[g + 1] - lastGameDetail.guessTimes[g]}
 						decimals={$preciseTimes ? 2 : 0}
 					/>
-				</div>
+				</div> -->
 			</div>
 		{/each}
 	</div>
@@ -185,9 +185,9 @@
 		{#if shareMenu}
 			<div class="share-buttons">
 				<button on:click={shareText}>{$t('main.results.text')}</button>
-				<button on:click={onShareImage}>{$t('main.results.image')}</button>
+				<!-- <button on:click={onShareImage}>{$t('main.results.image')}</button> -->
 			</div>
-			<div class="share-options">
+			<!-- <div class="share-options">
 				{#each toggleOptions as toggleOption}
 					<Toggle
 						toggled={get(toggleOption.bind)}
@@ -201,15 +201,15 @@
 						<div class="label">{$t(toggleOption.label)}</div>
 					</Toggle>
 				{/each}
-			</div>
+			</div> -->
 		{:else}
 			<button on:click={() => (shareMenu = true)}>{$t('main.results.share')}</button>
 		{/if}
 	</div>
-	<div class="image-share" style:display={imageShared && !shareMenu ? 'flex' : 'none'}>
+	<!-- <div class="image-share" style:display={imageShared && !shareMenu ? 'flex' : 'none'}>
 		<canvas bind:this={canvas} />
 		<button on:click={onCopyImage}>{$t('main.results.copy_image')}</button>
-	</div>
+	</div> -->
 </section>
 
 <style>
@@ -323,6 +323,7 @@
 		font-weight: 700;
 		min-width: 10rem;
 		background: var(--cta-color);
+		color: #fff;
 	}
 
 	button:hover {

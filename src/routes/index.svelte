@@ -20,6 +20,7 @@
 	import Header from '$com/Header.svelte'
 	import { resetBoard } from '$lib/board'
 	import { initGameState } from '$src/store'
+	import { ZoxWord } from '$lib/zox-word'
 
 	const { openScreen, gameMode } = store
 
@@ -42,11 +43,12 @@
 		} else if (wordFromHash !== get(store.answerRandom)) {
 			playRandom(wordFromHash)
 		}
-		if (get(store.gameFinished)) setTimeout(() => openScreen.set('results'), 1700)
+		if (get(store.gameFinished)) setTimeout(() => openScreen.set('results'), 50)
 	}
 
 	function playRandom(word?: string) {
-		const randomWord = word || getRandomWord()
+		// const randomWord = word || getRandomWord()
+		const randomWord = ZoxWord
 		hash = encodeWord(randomWord)
 		history.pushState(
 			'',
@@ -62,7 +64,8 @@
 	function playDaily() {
 		history.pushState('', document.title, window.location.pathname + window.location.search) // Remove # from URL
 		const dayNumber = getDayNumber()
-		const dailyWord = getWordByDay(dayNumber)
+		// const dailyWord = getWordByDay(dayNumber)
+		const dailyWord = ZoxWord
 		if (get(store.lastPlayedDaily) === getDayNumber() && get(store.answerDaily) === dailyWord)
 			return
 		resetBoard()

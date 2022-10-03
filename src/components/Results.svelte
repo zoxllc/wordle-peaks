@@ -43,14 +43,14 @@
 		{#if lastGameMode === lastGameDetail?.mode && lastAnswer === lastGameDetail?.answer}
 			<Tabs tab1Title={$t('main.summary.title')} tab2Title={$t('main.stats.title')}>
 				<LastGameDetail {lastGameDetail} slot="tab-1" />
-				<Stats slot="tab-2" gameMode={lastGameMode} />
+				<!-- <Stats slot="tab-2" gameMode={lastGameMode} /> -->
 			</Tabs>
 		{:else}
 			<Stats gameMode={lastGameMode} />
 		{/if}
 	</div>
 	<div class="next-up">
-		<div class="column">
+		<!-- <div class="column">
 			<div class="countdown">
 				<Time alwaysShowHours countdown={nextDailyTime} class="time">
 					<div slot="after-countdown" class="daily-text">{$t('main.results.try_today')}</div>
@@ -63,7 +63,11 @@
 				<button on:click={playDaily}>{$t('main.results.play_daily')}</button>
 			{/if}
 			<button on:click={playRandom}>{$t('main.results.play_random')}</button>
-		</div>
+		</div> -->
+		{#if lastGameFinished && lastGameWon}
+			<h4>Claim your prize here!</h4>
+			<a href="https://google.com">Whoah check it out!</a>
+		{/if}
 	</div>
 </Screen>
 
@@ -79,10 +83,15 @@
 		margin: 1.2rem 0;
 	}
 
+	h4 {
+		font-size: 1.5rem;
+	}
+
 	.next-up {
 		margin-top: 1.4rem;
 		padding: 0 1rem;
 		display: flex;
+		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
 		gap: 1rem;
@@ -141,7 +150,7 @@
 	}
 
 	.tabs-container {
-		background: var(--tertiary-color);
+		background: var(--primary-color);
 		border-radius: 1rem;
 		position: relative;
 	}

@@ -82,13 +82,13 @@
 				</div>
 			{/each}
 		</div>
-		<div
+		<!-- <div
 			class="graph"
 			class:minimized={$newUser && $currentRow === 0}
 			class:invisible={!$newUser && $currentRow === 0}
 		>
 			<Peaks />
-		</div>
+		</div> -->
 	{:else}
 		<div class="loading">loading...</div>
 	{/if}

@@ -99,7 +99,7 @@
 	}
 
 	.key-row button.invalid {
-		background: var(--secondary-color);
+		background: var(--keyboard-secondary);
 		color: #ccca;
 	}
 

@@ -112,6 +112,7 @@
 		transition: border-color 70ms ease-out;
 		text-shadow: 1px 1px 1px #0003;
 		user-select: none;
+		background: var(--primary-color);
 	}
 	.tile.finished {
 		border-color: #433a46;
@@ -164,7 +165,7 @@
 	.hint {
 		font-size: 0.5em;
 		font-weight: 400;
-		color: #bbb;
+		color: #efefef;
 		padding-top: 12px;
 		text-shadow: none;
 		display: flex;

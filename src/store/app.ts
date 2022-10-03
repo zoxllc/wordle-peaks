@@ -13,13 +13,13 @@ export const openScreen: Writable<null | 'options' | 'tutorial' | 'results'> = w
 
 export const highContrast: Writable<boolean> = storageWritable('wp-highContrast', false)
 export const showAllHints: Writable<boolean> = storageWritable('wp-showAllHints', false)
-export const swapEnterBackspace: Writable<boolean> = storageWritable('wp-swapEnterBackspace', false)
+export const swapEnterBackspace: Writable<boolean> = storageWritable('wp-swapEnterBackspace', true)
 export const keyboardLayout: Writable<KeyboardLayout> = storageWritable(
 	'wp-keyboardLayout',
 	'alphabetic'
 )
 export const dyslexicFont: Writable<boolean> = storageWritable('wp-dyslexicFont', false)
-export const allowDancing: Writable<boolean> = storageWritable('wp-allowDancing', true)
+export const allowDancing: Writable<boolean> = storageWritable('wp-allowDancing', false)
 export const shareURL: Writable<boolean> = storageWritable('wp-shareURL', true)
 export const shareTimes: Writable<boolean> = storageWritable('wp-shareTimes', false)
 export const preciseTimes: Writable<boolean> = storageWritable('wp-preciseTimes', false)

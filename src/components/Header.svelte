@@ -7,10 +7,7 @@
 
 <header class:high-contrast={$highContrast}>
 	<div class="heading-container">
-		<h1>Wordle Peaks</h1>
-		{#if browser}<div class="game-mode" class:large={$gameMode === 'random'}>
-				{$gameMode === 'daily' ? `#${$lastPlayedDaily + 1}` : '∞'}
-			</div>{/if}
+		<h1>ZOX Wordle</h1>
 	</div>
 	<div class="buttons" style:visibility={browser ? 'visible' : 'hidden'}>
 		<button
@@ -27,7 +24,7 @@
 				</g>
 			</svg>
 		</button>
-		<button
+		<!-- <button
 			title={$t('main.options.title')}
 			class="hover-spin"
 			on:click={() => openScreen.set('options')}
@@ -35,7 +32,7 @@
 			<svg viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
 				<path d={OptionsIconPathData} />
 			</svg>
-		</button>
+		</button> -->
 	</div>
 </header>
 
