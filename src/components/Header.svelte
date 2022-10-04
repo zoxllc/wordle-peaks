@@ -83,7 +83,7 @@
 		height: 45px;
 		margin-left: 10px;
 		border-radius: 8px;
-		border: 0;
+		border: 2px solid #888;
 		font-weight: 700;
 		font-size: 1.4em;
 		color: #888;
@@ -95,6 +95,7 @@
 	header button:hover {
 		color: var(--text-color);
 		background-color: var(--secondary-color);
+		border: 2px solid var(--secondary-color);
 	}
 
 	header button svg {

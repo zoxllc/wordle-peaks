@@ -47,6 +47,7 @@
 	.footer-row p {
 		margin: 0 0 0.2rem;
 		color: #454545;
+		text-align: center;
 	}
 
 	.icon-item {

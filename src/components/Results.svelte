@@ -39,6 +39,12 @@
 	{#if lastGameFinished && !lastGameWon}
 		<h3 class="answer">{@html $t('main.results.answer', { answer: lastAnswer.toUpperCase() })}</h3>
 	{/if}
+	{#if lastGameFinished && lastGameWon}
+		<a href="https://m.me/ZoxStraps?ref=w17703530">Click here to unlock the ZOX of the day</a>
+	{/if}
+	{#if lastGameFinished && !lastGameWon}
+		<a href="https://m.me/ZoxStraps?ref=w17703575">Click here to get your consolation prize</a>
+	{/if}
 	<div class="tabs-container">
 		{#if lastGameMode === lastGameDetail?.mode && lastAnswer === lastGameDetail?.answer}
 			<Tabs tab1Title={$t('main.summary.title')} tab2Title={$t('main.stats.title')}>
@@ -64,10 +70,6 @@
 			{/if}
 			<button on:click={playRandom}>{$t('main.results.play_random')}</button>
 		</div> -->
-		{#if lastGameFinished && lastGameWon}
-			<h4>Claim your prize here!</h4>
-			<a href="https://google.com">Whoah check it out!</a>
-		{/if}
 	</div>
 </Screen>
 
@@ -83,8 +85,13 @@
 		margin: 1.2rem 0;
 	}
 
-	h4 {
-		font-size: 1.5rem;
+	a {
+		font-size: 1.4rem;
+		text-align: center;
+		display: flex;
+		flex-direction: center;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.next-up {
@@ -153,6 +160,7 @@
 		background: var(--primary-color);
 		border-radius: 1rem;
 		position: relative;
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 400px) {
