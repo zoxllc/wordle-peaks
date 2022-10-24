@@ -40,10 +40,10 @@
 		<h3 class="answer">{@html $t('main.results.answer', { answer: lastAnswer.toUpperCase() })}</h3>
 	{/if}
 	{#if lastGameFinished && lastGameWon}
-		<a href="https://m.me/ZoxStraps?ref=w17703530">Click here to unlock the ZOX of the day</a>
+		<a href="https://m.me/ZoxStraps?ref=w17800466">Click here to unlock the ZOX of the day</a>
 	{/if}
 	{#if lastGameFinished && !lastGameWon}
-		<a href="https://m.me/ZoxStraps?ref=w17703575">Click here to get your consolation prize</a>
+		<a href="https://m.me/ZoxStraps?ref=w17800469">Click here to get your consolation prize</a>
 	{/if}
 	<div class="tabs-container">
 		{#if lastGameMode === lastGameDetail?.mode && lastAnswer === lastGameDetail?.answer}
