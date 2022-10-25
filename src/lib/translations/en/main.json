@@ -72,7 +72,6 @@
 		"show_precise_times": "Show precise times"
 	},
 	"footer": {
-		"credits": "an <a href=\"https://github.com/vegeta897/wordle-peaks\">open source</a> project inspired by <a href=\"https://www.nytimes.com/games/wordle/index.html\">Wordle</a> created by <a href=\"https://github.com/vegeta897/wordle-peaks\">vegeta897</a>",
-		"donate": "☕ <a href=\"https://buymeacoffee.com/vegeta897\">buy me a coffee</a> if you'd like to support me"
+		"credits": "a project inspired game created by <a href=\"https://github.com/vegeta897/wordle-peaks\">vegeta897</a>"
 	}
 }

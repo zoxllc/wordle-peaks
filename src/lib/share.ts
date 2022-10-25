@@ -18,7 +18,7 @@ export function getShareTitle({
 	const score = gameWon ? guesses.length : 'X'
 	const dayText = gameMode === 'random' ? '∞ ' : `#${day!} `
 	const scoreText = `${score}/6${hardMode ? '*' : ''}`
-	return `Wordle Peaks ${dayText}${scoreText}`
+	return `Peaks ${dayText}${scoreText}`
 }
 
 const aprilFoolsUp = [
@@ -219,7 +219,7 @@ export function drawResults(
 	ctx.fillText(caption, totalTime ? 8 : canvas.width / 2, guesses.length * 100 + 44)
 	if (showURL) {
 		ctx.font = '40px Arial'
-		let url = 'wordlepeaks.com'
+		let url = 'zox.la'
 		if (hash) url += '/#' + hash
 		ctx.fillStyle = '#a7a1a9'
 		ctx.fillText(url, totalTime ? 8 : canvas.width / 2, guesses.length * 100 + 92)

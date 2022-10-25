@@ -7,7 +7,7 @@
 
 <header class:high-contrast={$highContrast}>
 	<div class="heading-container">
-		<h1>ZOX Wordle</h1>
+		<h1>ZOTD Game</h1>
 	</div>
 	<div class="buttons" style:visibility={browser ? 'visible' : 'hidden'}>
 		<button
