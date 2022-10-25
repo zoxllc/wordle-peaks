@@ -32,18 +32,33 @@
 <Screen
 	title={lastGameFinished
 		? lastGameWon
-			? `${$t('main.results.win')} 🎉`
-			: `${$t('main.results.lose')} ☹️`
+			? ``
+			: ``
 		: ''}
 >
 	{#if lastGameFinished && !lastGameWon}
 		<h3 class="answer">{@html $t('main.results.answer', { answer: lastAnswer.toUpperCase() })}</h3>
 	{/if}
 	{#if lastGameFinished && lastGameWon}
-		<a href="https://m.me/ZoxStraps?ref=w17703530">Click here to unlock the ZOX of the day</a>
+		<div style="text-align: center;">
+			<p>Congratulations, you ﬁgured it out! 🎉 Click the conﬁrm button below
+				to recieve your secret link to this week's ZOTD drop:</p>
+			<a href="https://m.me/ZoxStraps?ref=w17732313">
+				<button class="zox-button">CONFIRM</button>
+			</a>
+			<p>We'll send the link via Facebook Messenger at 4pm CT.
+				Be sure to set your alarm, these are going to go fast!</p>
+		</div>
 	{/if}
 	{#if lastGameFinished && !lastGameWon}
-		<a href="https://m.me/ZoxStraps?ref=w17703575">Click here to get your consolation prize</a>
+		<div style="text-align: center;">
+			<p>Nice try, you almost got it! Don't worry, you can still click the confirm button below and we'll send you a secret link to this week's ZOTD drop:</p>
+			<a href="https://m.me/ZoxStraps?ref=w17732316">
+				<button class="zox-button">CONFIRM</button>
+			</a>
+			<p>We'll send the link via Facebook Messenger at 5pm CT.
+				Be sure to set your alarm, these are going to go fast!</p>
+		</div>
 	{/if}
 	<div class="tabs-container">
 		{#if lastGameMode === lastGameDetail?.mode && lastAnswer === lastGameDetail?.answer}
@@ -74,6 +89,22 @@
 </Screen>
 
 <style>
+	.zox-button, .zox-button:visited {
+		background: black;
+		color: white;
+		border-radius: 0;
+		text-transform: uppercase;
+		margin: 1rem;
+		padding: 1rem 2rem;
+		height: auto;
+		font-size: 1rem;
+		border: 2px solid black;
+	}
+	.zox-button:hover {
+		background: white;
+		color: black;
+		text-decoration: none;
+	}
 	h3 {
 		font-size: 1.2em;
 		margin: 0 0 0.3rem;
@@ -116,7 +147,6 @@
 	}
 
 	button {
-		border-radius: 6px;
 		border: 0;
 		padding: 0;
 		height: 3rem;
