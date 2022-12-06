@@ -29,35 +29,38 @@
 	setInterval(() => (nextWordReady = nextDailyTime < new Date()), 1000)
 </script>
 
-<Screen
-	title={lastGameFinished
-		? lastGameWon
-			? ``
-			: ``
-		: ''}
->
+<Screen title={lastGameFinished ? (lastGameWon ? `` : ``) : ''}>
 	{#if lastGameFinished && !lastGameWon}
 		<h3 class="answer">{@html $t('main.results.answer', { answer: lastAnswer.toUpperCase() })}</h3>
 	{/if}
 	{#if lastGameFinished && lastGameWon}
 		<div style="text-align: center;">
-			<p>Congratulations, you ﬁgured it out! 🎉 Click the conﬁrm button below
-				to recieve your secret link to this week's ZOTD drop:</p>
-			<a href="https://m.me/ZoxStraps?ref=w17800466">
+			<p>
+				Congratulations, you ﬁgured it out! 🎉 Click the conﬁrm button below to recieve your secret
+				link to this week's ZOTD drop:
+			</p>
+			<a href="https://m.me/ZoxStraps?ref=w18013635">
 				<button class="zox-button">CONFIRM</button>
 			</a>
-			<p>We'll send the link via Facebook Messenger at 4pm CT.
-				Be sure to set your alarm, these are going to go fast!</p>
+			<p>
+				We'll send the link via Facebook Messenger at 4pm CT. Be sure to set your alarm, these are
+				going to go fast!
+			</p>
 		</div>
 	{/if}
 	{#if lastGameFinished && !lastGameWon}
 		<div style="text-align: center;">
-			<p>Nice try, you almost got it! Don't worry, you can still click the confirm button below and we'll send you a secret link to this week's ZOTD drop:</p>
-			<a href="https://m.me/ZoxStraps?ref=w17800469">
+			<p>
+				Nice try, you almost got it! Don't worry, you can still click the confirm button below and
+				we'll send you a secret link to this week's ZOTD drop:
+			</p>
+			<a href="https://m.me/ZoxStraps?ref=w18013643">
 				<button class="zox-button">CONFIRM</button>
 			</a>
-			<p>We'll send the link via Facebook Messenger at 5pm CT.
-				Be sure to set your alarm, these are going to go fast!</p>
+			<p>
+				We'll send the link via Facebook Messenger at 5pm CT. Be sure to set your alarm, these are
+				going to go fast!
+			</p>
 		</div>
 	{/if}
 	<div class="tabs-container">
@@ -89,7 +92,8 @@
 </Screen>
 
 <style>
-	.zox-button, .zox-button:visited {
+	.zox-button,
+	.zox-button:visited {
 		background: black;
 		color: white;
 		border-radius: 0;

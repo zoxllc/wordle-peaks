@@ -1,1 +1,1 @@
-export const ZoxWord = 'trust'
+export const ZoxWord = 'climb'

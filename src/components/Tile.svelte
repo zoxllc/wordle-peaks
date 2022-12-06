@@ -108,9 +108,9 @@
 		border-radius: 4px;
 		width: 100%;
 		height: 100%;
-		color: #fff;
+		color: rgb(0, 0, 0);
 		transition: border-color 70ms ease-out;
-		text-shadow: 1px 1px 1px #0003;
+		/* text-shadow: 1px 1px 1px #0003; */
 		user-select: none;
 		background: var(--primary-color);
 	}
@@ -123,9 +123,11 @@
 	.tile.scored {
 		background: var(--primary-color);
 		border: 0;
+		color: white;
 	}
 	.tile.correct {
 		background: var(--correct-color);
+		color: white;
 	}
 	.tile.clickable {
 		cursor: pointer;
